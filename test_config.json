@@ -1,0 +1,11 @@
+{
+    "logger": {},
+    "mysql": {
+        "connections": 20,
+        "host": "localhost",
+        "user": "root",
+        "password": "abc123",
+        "database": "dbname",
+        "port": 3306
+    }
+}

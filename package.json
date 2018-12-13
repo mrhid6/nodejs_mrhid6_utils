@@ -8,6 +8,7 @@
   "dependencies": {
     "fs-extra": "^7.0.1",
     "mysql": "^2.16.0",
+    "nicelogger": "^17.4.4-b",
     "object-path": "^0.11.4"
   }
 }

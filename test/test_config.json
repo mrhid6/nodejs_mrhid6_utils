@@ -1,0 +1,33 @@
+{
+    "logger": {
+        "appInfo": "package.json",
+        "date": true,
+        "time": true,
+        "machineName": false,
+        "separatedTimestamp": false,
+        "separatedInfo": false,
+        "logLevel": "all",
+        "months": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    "mysql": {
+        "connections": 20,
+        "host": "localhost",
+        "user": "root",
+        "password": "abc123",
+        "database": "dbname",
+        "port": 3306
+    }
+}
