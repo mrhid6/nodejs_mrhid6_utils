@@ -6,6 +6,9 @@ Mrhid6Utils.DatabaseHelper = require("./lib/databasehelper");
 Mrhid6Utils.Cleanup = require("./lib/cleanup");
 Mrhid6Utils.Logger = require("./lib/logger");
 
+
+Mrhid6Utils.NetworkServer = require("./lib/networkserver");
+
 Mrhid6Utils.Tools = {};
 Mrhid6Utils.Tools.generateRandomString = function (length) {
     var text = "";
