@@ -28,9 +28,9 @@ Mrhid6Utils.Tools.generateUUID = function (format) {
     for (var i = 0; i < formatdata.length; i++) {
         var d = formatdata[i];
         if (i > 0) {
-            ret_str = ret_str + "-" + Utils.generateRandomString(d.length);
+            ret_str = ret_str + "-" + Mrhid6Utils.Tools.generateRandomString(d.length);
         } else {
-            ret_str = ret_str + Utils.generateRandomString(d.length);
+            ret_str = ret_str + Mrhid6Utils.Tools.generateRandomString(d.length);
         }
     }
 
