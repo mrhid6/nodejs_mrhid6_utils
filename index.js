@@ -1,13 +1,13 @@
 const Mrhid6Utils = {}
 
 Mrhid6Utils.NET = {}
-Mrhid6Utils.Config = require("./lib/config.js");
-Mrhid6Utils.DatabaseHelper = require("./lib/databasehelper");
-Mrhid6Utils.Cleanup = require("./lib/cleanup");
-Mrhid6Utils.Logger = require("./lib/logger");
+Mrhid6Utils.Config = require(__dirname+"/lib/config.js");
+Mrhid6Utils.DatabaseHelper = require(__dirname+"/lib/databasehelper");
+Mrhid6Utils.Cleanup = require(__dirname+"/lib/cleanup");
+Mrhid6Utils.Logger = require(__dirname+"/lib/logger");
 
 
-Mrhid6Utils.NetworkServer = require("./lib/networkserver");
+Mrhid6Utils.NetworkServer = require(__dirname+"/lib/networkserver");
 
 Mrhid6Utils.Tools = {};
 Mrhid6Utils.Tools.generateRandomString = function (length) {
