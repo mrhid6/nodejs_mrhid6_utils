@@ -24,10 +24,10 @@
     },
     "mysql": {
         "connections": 20,
-        "host": "localhost",
-        "user": "root",
-        "password": "abc123",
-        "database": "dbname",
+        "host": "www.hostxtra.co.uk",
+        "user": "dominic",
+        "password": "Jasper1$1",
+        "database": "ssc",
         "port": 3306
     }
 }
