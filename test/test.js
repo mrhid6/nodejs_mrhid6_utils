@@ -12,6 +12,15 @@ const logger = new Mrhid6Utils.Logger(config, {
 
 DB.createConnection();
 
+
+DB.testConnection().then(() => {
+    console.log("connected!");
+}, () => {
+    console.log("not Connected!");
+});
+
 DB.queryUsingSQLFile("players.sql").then(rows => {
     console.log(rows);
+}).catch(err => {
+    console.log(err);
 })
