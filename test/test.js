@@ -19,8 +19,10 @@ DB.testConnection().then(() => {
     console.log("not Connected!");
 });
 
-DB.queryUsingSQLFile("players.sql").then(rows => {
-    console.log(rows);
-}).catch(err => {
-    console.log(err);
-})
+for (let i = 0; i < 100; i++) {
+    DB.queryUsingSQLFile("players.sql").then(rows => {
+        console.log(rows);
+    }).catch(err => {
+        console.log(err);
+    })
+}

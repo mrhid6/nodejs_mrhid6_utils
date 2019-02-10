@@ -1,2 +1,1 @@
-select * from players;
-select * from player_skills;
+select player_id from players;
