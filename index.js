@@ -2,6 +2,7 @@ const Mrhid6Utils = {}
 
 Mrhid6Utils.NET = {}
 Mrhid6Utils.Config = require("./lib/config.js");
+Mrhid6Utils.FileCache = require("./lib/filecache.js");
 Mrhid6Utils.DatabaseHelper = require("./lib/databasehelper");
 Mrhid6Utils.DatabaseHelperNew = require("./lib/databasehelper_new");
 Mrhid6Utils.Cleanup = require("./lib/cleanup");

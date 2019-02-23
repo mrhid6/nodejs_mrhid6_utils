@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "express-socket.io-session": "^1.3.5",
+    "fcache": "^0.3.0",
     "fs-extra": "^7.0.1",
     "mysql": "^2.16.0",
     "nicelogger": "^17.4.4-b",
