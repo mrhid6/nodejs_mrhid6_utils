@@ -23,6 +23,16 @@ Mrhid6Utils.Tools.generateRandomString = function (length) {
     return text;
 };
 
+Mrhid6Utils.Tools.generateRandomInt = function (length) {
+    var text = "";
+    var possible = "0123456789";
+
+    for (var i = 0; i < length; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+};
+
 Mrhid6Utils.Tools.generateUUID = function (format) {
     var formatdata = format.split("-");
 
