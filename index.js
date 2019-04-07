@@ -51,4 +51,52 @@ Mrhid6Utils.Tools.generateUUID = function (format) {
     return ret_str;
 }
 
+Mrhid6Utils.Tools.openModal = function (modal_name, var1, var2) {
+
+    let options = {
+        allowBackdropRemoval: true
+    };
+
+    let callback = null;
+
+    if (arguments.length == 2) {
+        callback = var1;
+    } else if (arguments.length == 3) {
+        options = var1;
+        callback = var2;
+    }
+
+    if ($("body").hasClass("modal-open")) {
+        return;
+    }
+
+    $.ajax({
+        url: "/public/modals/" + modal_name + ".html",
+        success: function (data) {
+
+            $('body').append(data);
+
+            var modalEl = $("#" + modal_name);
+
+            modalEl.find("button.close").click(function (e) {
+                e.preventDefault();
+                modalEl.trigger("hidden.bs.modal");
+                $("body").removeClass("modal-open").attr("style", null);
+            })
+
+            modalEl.on('hidden.bs.modal', function () {
+                $(this).remove();
+                $('[name^="__privateStripe"]').remove();
+                SS_WEB.Dashboard.modal_opened = false;
+                if (options.allowBackdropRemoval == true)
+                    $('.modal-backdrop').remove();
+            });
+            modalEl.modal('show');
+            if (callback)
+                callback(modalEl);
+        },
+        dataType: 'html'
+    });
+};
+
 module.exports = Mrhid6Utils;
