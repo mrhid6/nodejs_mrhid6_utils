@@ -1,0 +1,33 @@
+{
+    "logger": {
+        "appInfo": "package.json",
+        "date": true,
+        "time": true,
+        "machineName": false,
+        "separatedTimestamp": false,
+        "separatedInfo": false,
+        "logLevel": "all",
+        "months": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ]
+    },
+    "mysql": {
+        "connections": 20,
+        "host": "TEST",
+        "user": "domsdfsfinic",
+        "password": "Jasper1$1",
+        "database": "ssc",
+        "port": 3306
+    }
+}
