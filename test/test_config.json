@@ -25,9 +25,9 @@
     "mysql": {
         "connections": 20,
         "host": "www.hostxtra.co.uk",
-        "user": "dominic",
-        "password": "Jasper1$1",
-        "database": "ssc",
+        "user": "rnet-status",
+        "password": "RNETStatus1$1",
+        "database": "status_web",
         "port": 3306
     }
 }

@@ -5,13 +5,13 @@ const configOptions = {
     defaultConfigFile: "./default_config.json"
 }
 
+const config = new Mrhid6Utils.Config(configOptions);
 
+const DB = new Mrhid6Utils.DatabaseHelperNew(config);
 
-
-for (let i = 0; i < 1; i++) {
-    const config = new Mrhid6Utils.Config(configOptions);
-    if (config._data.mysql.host == "TEST") {
-        console.log(i);
-        break;
-    }
-}
+DB.createConnection().then(() => {
+    console.log("connected!");
+}).catch(err => {
+    console.log(err);
+    console.log("failed!");
+})
