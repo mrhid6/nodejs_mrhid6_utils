@@ -11,6 +11,11 @@ const DB = new Mrhid6Utils.DatabaseHelperNew(config);
 
 DB.createConnection().then(() => {
     console.log("connected!");
+    for (var i = 0; i < 50; i++) {
+        DB.query("SHOW TABLES").then(rows => {
+            console.log("##########");
+        })
+    }
 }).catch(err => {
     console.log(err);
     console.log("failed!");
