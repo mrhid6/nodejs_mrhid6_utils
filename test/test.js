@@ -13,15 +13,14 @@ DB.createConnection()
 
 DB.testConnection().then(() => {
     console.log("connected!");
+
+    for (var i = 0; i < 400; i++) {
+        DB.query("SHOW TABLES").then(() => {
+            console.log("1");
+        })
+    }
+
 }).catch(err => {
     console.log("testConnection failed!");
     console.log(err);
 })
-
-setTimeout(() => {
-    DB.testConnection().then(() => {
-        console.log("Test Complete");
-    }).catch(err => {
-        console.log(err);
-    })
-}, (3.5 * 60 * 1000))
