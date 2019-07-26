@@ -23,7 +23,7 @@
         ]
     },
     "mysql": {
-        "connections": 20,
+        "connections": 80,
         "host": "www.hostxtra.co.uk",
         "user": "rnet-status",
         "password": "RNETStatus1$1",

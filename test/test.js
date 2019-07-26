@@ -9,14 +9,19 @@ const config = new Mrhid6Utils.Config(configOptions);
 
 const DB = new Mrhid6Utils.DatabaseHelperNew(config);
 
-DB.createConnection().then(() => {
+DB.createConnection()
+
+DB.testConnection().then(() => {
     console.log("connected!");
-    for (var i = 0; i < 50; i++) {
-        DB.query("SHOW TABLES").then(rows => {
-            console.log("##########");
-        })
-    }
 }).catch(err => {
+    console.log("testConnection failed!");
     console.log(err);
-    console.log("failed!");
 })
+
+setTimeout(() => {
+    DB.testConnection().then(() => {
+        console.log("Test Complete");
+    }).catch(err => {
+        console.log(err);
+    })
+}, (3.5 * 60 * 1000))
