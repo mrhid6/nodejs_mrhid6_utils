@@ -1,20 +1,22 @@
 const Mrhid6Utils = require("../index.js");
 
-const configOptions = {
-    configFileName: "./test_config.json",
-    defaultConfigFile: "./default_config.json"
+const options = {
+    serialize_data: true
 }
 
-const config = new Mrhid6Utils.Config(configOptions);
+const RedisHelper = new Mrhid6Utils.RedisHelper(options);
 
-const DB = new Mrhid6Utils.DatabaseHelperNew(config);
 
-DB.createConnection().then(() => {
-    console.log("connected!");
-    DB.query("SELECT * FROM nodes").then(rows => {
-        console.log(rows[0]);
-    })
+RedisHelper.checkDataInRedis("Test").then(check_result => {
+    if (check_result == false) {
+        RedisHelper.saveDataInRedis("Test", "hello!").then(() => {
+            console.log("Saved!")
+        })
+    } else {
+        RedisHelper.getDataFromRedis("Test").then(data => {
+            console.log(data)
+        });
+    }
 }).catch(err => {
-    console.log("testConnection failed!");
     console.log(err);
-})
+});
