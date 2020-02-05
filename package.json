@@ -10,13 +10,13 @@
         "express": "^4.17.1",
         "express-socket.io-session": "^1.3.5",
         "fs-extra": "^8.1.0",
+        "ini": "^1.3.5",
         "mysql": "^2.17.1",
         "mysql2": "^1.7.0",
         "nicelogger": "^17.4.4-b",
         "object-path": "^0.11.4",
         "redis": "^2.8.0",
         "serialijse": "^0.1.3",
-        "socket.io": "^2.3.0",
-        "ini": "^1.3.5"
+        "socket.io": "^2.3.0"
     }
 }
