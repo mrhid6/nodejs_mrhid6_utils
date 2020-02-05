@@ -7,6 +7,7 @@ Mrhid6Utils.DatabaseHelper = require("./lib/databasehelper");
 Mrhid6Utils.Cleanup = require("./lib/cleanup");
 Mrhid6Utils.Logger = require("./lib/logger");
 Mrhid6Utils.RedisHelper = require("./lib/redishelper");
+Mrhid6Utils.Metrics = require("./lib/metrics");
 
 Mrhid6Utils.NetworkServer = require("./lib/networkserver");
 Mrhid6Utils.NetworkClient = require("./lib/networkclient");
