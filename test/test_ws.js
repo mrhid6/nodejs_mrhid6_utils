@@ -11,6 +11,13 @@ const WSNetworkServer = new Mrhid6Utils.WSNetworkServer();
 const wss = new WebSocket.Server({ server:http });
 WSNetworkServer.init(wss);
 
+WSNetworkServer.addEventHandler("connection", ()=>{
+	console.log("Connection!");
+});
+WSNetworkServer.addEventHandler("disconnect", ()=>{
+	console.log("DisConnection!");
+});
+
 WSNetworkServer.addEventHandler("packet.client.test", Packet=>{
 	const pres = WSNetworkServer.createResponsePacket(Packet, "world");
 	WSNetworkServer.sendPacket(pres);
