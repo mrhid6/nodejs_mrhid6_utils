@@ -12,6 +12,8 @@ Mrhid6Utils.Metrics = require("./lib/metrics");
 Mrhid6Utils.NetworkServer = require("./lib/networkserver");
 Mrhid6Utils.NetworkClient = require("./lib/networkclient");
 
+Mrhid6Utils.WSNetworkServer = require("./lib/WSNetworkServer");
+
 Mrhid6Utils.Tools = require("./lib/tools");
 
 module.exports = Mrhid6Utils;
