@@ -8,7 +8,8 @@ Mrhid6Utils.Cleanup = require("./lib/cleanup");
 Mrhid6Utils.Logger = require("./lib/logger");
 Mrhid6Utils.RedisHelper = require("./lib/redishelper");
 Mrhid6Utils.Metrics = require("./lib/metrics");
-
+Mrhid6Utils.MySQLModel = require("./lib/mysqlmodel").Model;
+Mrhid6Utils.MySQLModelTypes = require("./lib/mysqlmodel").TYPES;
 Mrhid6Utils.NetworkServer = require("./lib/networkserver");
 Mrhid6Utils.NetworkClient = require("./lib/networkclient");
 
