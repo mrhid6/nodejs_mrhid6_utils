@@ -1,0 +1,1 @@
+select player_id from players;

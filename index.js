@@ -3,7 +3,12 @@ const Mrhid6Utils = {}
 Mrhid6Utils.NET = {}
 Mrhid6Utils.Config = require("./lib/config.js");
 Mrhid6Utils.FileCache = require("./lib/filecache.js");
-Mrhid6Utils.DatabaseHelper = require("./lib/databasehelper");
+Mrhid6Utils.DB = {
+    QueryTypes: require("./lib/DB/databasehelper").QueryTypes,
+    MySQL: require("./lib/DB/db_helper_mysql"),
+    SQLite: require("./lib/DB/db_helper_sqlite")
+}
+Mrhid6Utils.DatabaseHelper = require("./lib/DB/db_helper_mysql");
 Mrhid6Utils.Cleanup = require("./lib/cleanup");
 Mrhid6Utils.Logger = require("./lib/logger");
 Mrhid6Utils.RedisHelper = require("./lib/redishelper");
