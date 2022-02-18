@@ -1,5 +1,5 @@
-const iModel = require("../").MySQLModel;
-const iTypes = require("../").MySQLModelTypes;
+const iModel = require("../").Model;
+const iTypes = require("../").ModelTypes;
 
 class InventoryItemModel extends iModel {
     constructor(DB) {
