@@ -1,15 +1,16 @@
-const iModel = require("../").Model;
-const iTypes = require("../").ModelTypes;
+const iModel = require("../").Models.Model;
+const iTranslation = require("../").Models.Translation;
+const iTypes = require("../").Models.Types;
 
 class InventoryItemModel extends iModel {
     constructor(DB) {
         super(DB, {
             table: "inventory_items",
             translations: [
-                ["ii_inv_id", "inv_id", iTypes.NUMBER],
-                ["ii_quantity", "quantity", iTypes.NUMBER],
-                ["ii_item_desc", "descriptor", iTypes.STRING],
-                ["ii_slot_num", "slot_id", iTypes.NUMBER]
+                new iTranslation("ii_inv_id", "inv_id", iTypes.NUMBER),
+                new iTranslation("ii_quantity", "quantity", iTypes.NUMBER),
+                new iTranslation("ii_item_desc", "descriptor", iTypes.STRING),
+                new iTranslation("ii_slot_num", "slot_id", iTypes.NUMBER)
             ],
             links: []
         })
@@ -27,10 +28,10 @@ class InventoryModel extends iModel {
         super(DB, {
             table: "inventories",
             translations: [
-                ["inv_id", "id", iTypes.NUMBER],
-                ["inv_char_id", "char_id", iTypes.NUMBER],
-                ["inv_name", "name", iTypes.STRING],
-                ["inv_size", "size", iTypes.NUMBER]
+                new iTranslation("inv_id", "id", iTypes.NUMBER),
+                new iTranslation("inv_char_id", "char_id", iTypes.NUMBER),
+                new iTranslation("inv_name", "name", iTypes.STRING),
+                new iTranslation("inv_size", "size", iTypes.NUMBER)
             ],
             links: [
                 ["items", "inventory_items", ["id", "ii_inv_id"], InventoryItemModel]
@@ -52,10 +53,10 @@ class CharacterModel extends iModel {
         super(DB, {
             table: "characters",
             translations: [
-                ["c_id", "id", iTypes.NUMBER],
-                ["c_user_id", "user_id", iTypes.NUMBER],
-                ["c_name", "name", iTypes.STRING],
-                ["c_mapname", "mapname", iTypes.STRING]
+                new iTranslation("c_id", "id", iTypes.NUMBER),
+                new iTranslation("c_user_id", "user_id", iTypes.NUMBER),
+                new iTranslation("c_name", "name", iTypes.STRING),
+                new iTranslation("c_mapname", "mapname", iTypes.STRING)
             ],
             links: [
                 ["inventories", "inventories", ["id", "inv_char_id"], InventoryModel]
@@ -77,15 +78,15 @@ class UserModel extends iModel {
         super(DB, {
             table: "users",
             translations: [
-                ["user_id", "id", iTypes.NUMBER],
-                ["user_username", "username", iTypes.STRING],
-                ["user_password", "password", iTypes.STRING],
-                ["user_firstname", "firstname", iTypes.STRING],
-                ["user_lastname", "lastname", iTypes.STRING],
-                ["user_email", "email", iTypes.STRING],
-                ["user_web_access", "web_access", iTypes.BOOLEAN],
-                ["user_join_date", "join_date", iTypes.DATE],
-                ["user_verified", "verified", iTypes.BOOLEAN],
+                new iTranslation("user_id", "id", iTypes.NUMBER),
+                new iTranslation("user_username", "username", iTypes.STRING, ""),
+                new iTranslation("user_password", "password", iTypes.STRING, ""),
+                new iTranslation("user_firstname", "firstname", iTypes.STRING, ""),
+                new iTranslation("user_lastname", "lastname", iTypes.STRING, ""),
+                new iTranslation("user_email", "email", iTypes.STRING, ""),
+                new iTranslation("user_web_access", "web_access", iTypes.BOOLEAN, false),
+                new iTranslation("user_join_date", "join_date", iTypes.DATE, new Date()),
+                new iTranslation("user_verified", "verified", iTypes.BOOLEAN, false),
             ],
             links: [
                 ["characters", "characters", ["id", "c_user_id"], CharacterModel]
@@ -93,7 +94,7 @@ class UserModel extends iModel {
         })
     }
 
-    getSearchData(){
+    getSearchData() {
         return {
             conditions: ["user_id"],
             value: [this.get("id")]

@@ -14,13 +14,11 @@ Config.load().then(() => {
         MysqlHelper.setScriptsDirectory(__dirname)
         const uModel = new iUserModel(MysqlHelper);
         uModel.ParseData({
-            user_id: 3
+            user_id: 50
         });
-        uModel.retrieve().then(() => {
-            uModel.setAndSave("lastname", "BLAHBLEE");
 
-            uModel.SaveToDB();
-        })
+        uModel.CreateInDB();
+
 
     }).catch(err => {
         console.log(err);
