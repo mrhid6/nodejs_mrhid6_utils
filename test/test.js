@@ -17,7 +17,9 @@ Config.load().then(() => {
             user_id: 3
         });
         uModel.retrieve().then(() => {
-            console.log(uModel.getCharacters()[0].getInventories()[0].getItems())
+            uModel.setAndSave("lastname", "BLAHBLEE");
+
+            uModel.SaveToDB();
         })
 
     }).catch(err => {

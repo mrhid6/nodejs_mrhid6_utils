@@ -93,8 +93,16 @@ class UserModel extends iModel {
         })
     }
 
+    getSearchData(){
+        return {
+            conditions: ["user_id"],
+            value: [this.get("id")]
+        }
+    }
+
     retrieve() {
-        return super.retrieve(["user_id"], [this.get("id")])
+        const searchData = this.getSearchData();
+        return super.retrieve(searchData.conditions, searchData.value);
     }
 
     getCharacters() {
