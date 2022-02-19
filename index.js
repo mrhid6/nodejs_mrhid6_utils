@@ -13,8 +13,11 @@ Mrhid6Utils.Cleanup = require("./lib/cleanup");
 Mrhid6Utils.Logger = require("./lib/logger");
 Mrhid6Utils.RedisHelper = require("./lib/redishelper");
 Mrhid6Utils.Metrics = require("./lib/metrics");
-Mrhid6Utils.Model = require("./lib/model").Model;
-Mrhid6Utils.ModelTypes = require("./lib/model").TYPES;
+Mrhid6Utils.Models = {
+    Model: require("./lib/model").Model,
+    Translation: require("./lib/model").Translation,
+    Types: require("./lib/model").TYPES
+}
 Mrhid6Utils.NetworkServer = require("./lib/networkserver");
 Mrhid6Utils.NetworkClient = require("./lib/networkclient");
 
