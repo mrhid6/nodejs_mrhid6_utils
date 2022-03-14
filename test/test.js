@@ -13,11 +13,20 @@ Config.load().then(() => {
     MysqlHelper.init().then(() => {
         MysqlHelper.setScriptsDirectory(__dirname)
         const uModel = new iUserModel(MysqlHelper);
-        uModel.ParseData({
-            user_id: 50
+        uModel.fromJson({
+            UserId: 3
         });
 
-        uModel.CreateInDB();
+        uModel.retrieve().then(() => {
+
+            //console.log(uModel.toJson());
+
+            const tempModel = new iUserModel(MysqlHelper);
+            tempModel.fromJson(uModel.toJson());
+            console.log(tempModel.toJson());
+        })
+
+
 
 
     }).catch(err => {

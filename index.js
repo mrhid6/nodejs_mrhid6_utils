@@ -16,6 +16,7 @@ Mrhid6Utils.Metrics = require("./lib/metrics");
 Mrhid6Utils.Models = {
     Model: require("./lib/model").Model,
     Translation: require("./lib/model").Translation,
+    Link: require("./lib/model").Link,
     Types: require("./lib/model").TYPES
 }
 Mrhid6Utils.NetworkServer = require("./lib/networkserver");
