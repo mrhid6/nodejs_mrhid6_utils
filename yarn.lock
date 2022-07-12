@@ -190,11 +190,6 @@ component-emitter@~1.3.0:
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
 
-consolecolors@0.x.x:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/consolecolors/-/consolecolors-0.0.1.tgz#1821ddde67e29847705931cc0d27868bc29504ab"
-  integrity sha512-WFdBRSf99IkGpSYdZSMa54vOuJH86cMr8pByIC8oG6bOQ3iup3W1CgM57/zd5dZQMQgq1pLLBwsNGMjMMATYGg==
-
 content-disposition@0.5.4:
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/content-disposition/-/content-disposition-0.5.4.tgz#8b82b4efac82512a02bb0b1dcec9d2c5e8eb5bfe"
@@ -568,6 +563,11 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+lodash@^4.17.12:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
 long@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
@@ -635,6 +635,11 @@ mkdirp-classic@^0.5.2, mkdirp-classic@^0.5.3:
   resolved "https://registry.yarnpkg.com/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz#fa10c9115cc6d8865be221ba47ee9bed78601113"
   integrity sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==
 
+moment@^2.20.1:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -680,13 +685,6 @@ negotiator@0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
-
-nicelogger@^17.4.4-b:
-  version "17.4.4-b"
-  resolved "https://registry.yarnpkg.com/nicelogger/-/nicelogger-17.4.4-b.tgz#4ad41060706674d4263232ec78ae909b623dcd79"
-  integrity sha512-uh7TUyzgY40RzbyULZSu0OCNwKpluWtMbSC3aMlOtZIWua4UsTxc8EEMy8EKnQm47cDVRGLuXrEEMT7FxMHa2w==
-  dependencies:
-    consolecolors "0.x.x"
 
 node-abi@^3.3.0:
   version "3.22.0"
@@ -913,6 +911,14 @@ simple-get@^4.0.0:
     decompress-response "^6.0.0"
     once "^1.3.1"
     simple-concat "^1.0.0"
+
+simple-node-logger@^21.8.12:
+  version "21.8.12"
+  resolved "https://registry.yarnpkg.com/simple-node-logger/-/simple-node-logger-21.8.12.tgz#51cea08e17ed0139a78f1f1a7397fa5e756767e8"
+  integrity sha512-RPImnYDq3jdUjaTvYLghaF1n65Dd0LV8hdZtlT0X1NZBAkw+lx0ZJtFydcUyYKjg0Yxd27AW9IAIc3OLhTjBzA==
+  dependencies:
+    lodash "^4.17.12"
+    moment "^2.20.1"
 
 socket.io-adapter@~2.4.0:
   version "2.4.0"
