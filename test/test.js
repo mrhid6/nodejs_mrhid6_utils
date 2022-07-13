@@ -1,16 +1,24 @@
 const Mrhid6Utils = require("../index.js");
 
-const Logger = Mrhid6Utils.Logger;
+const iConfig = Mrhid6Utils.Config;
 
 
-class MainLogger extends Logger {
+class Config extends iConfig {
     constructor() {
         super({
-            logName: "Testing"
+            configName: "Testing"
         })
+    }
+
+    setDefaultValues = async() => {
+        this.set("test", "test1")
     }
 }
 
-const theLogger = new MainLogger();
+const config = new Config();
 
-theLogger.init();
+config.load().then(() => {
+    console.log(config)
+}).catch(err => {
+    console.log(err);
+})
