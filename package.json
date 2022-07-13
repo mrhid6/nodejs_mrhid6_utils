@@ -1,6 +1,6 @@
 {
     "name": "mrhid6utils",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "index.js",
     "repository": "https://gitlab.com/mrhid6/nodejs_mrhid6_utils",
     "author": "Dominic <dominic.richardson1@hotmail.co.uk>",
