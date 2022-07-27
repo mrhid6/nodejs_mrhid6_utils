@@ -1,6 +1,6 @@
 {
     "name": "mrhid6utils",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "index.js",
     "repository": "https://gitlab.com/mrhid6/nodejs_mrhid6_utils",
     "author": "Dominic <dominic.richardson1@hotmail.co.uk>",
@@ -14,6 +14,7 @@
         "fs-extra": "^10.1.0",
         "ini": "^3.0.0",
         "mysql2": "^2.3.3",
+        "node-docker-api": "^1.1.22",
         "object-path": "^0.11.8",
         "redis": "^4.1.0",
         "serialijse": "^0.3.0",

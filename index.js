@@ -26,4 +26,6 @@ Mrhid6Utils.WSNetworkServer = require("./lib/WSNetworkServer");
 
 Mrhid6Utils.Tools = require("./lib/tools");
 
+Mrhid6Utils.DockerHelper = require("./lib/docker_helper");
+
 module.exports = Mrhid6Utils;
