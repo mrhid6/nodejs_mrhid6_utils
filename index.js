@@ -6,7 +6,6 @@ Mrhid6Utils.FileCache = require("./lib/filecache.js");
 Mrhid6Utils.DB = {
     QueryTypes: require("./lib/DB/databasehelper").QueryTypes,
     MySQL: require("./lib/DB/db_helper_mysql"),
-    SQLite: require("./lib/DB/db_helper_sqlite"),
 };
 Mrhid6Utils.DatabaseHelper = require("./lib/DB/db_helper_mysql");
 Mrhid6Utils.Cleanup = require("./lib/cleanup");
