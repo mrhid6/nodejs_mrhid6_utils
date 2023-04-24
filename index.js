@@ -11,7 +11,6 @@ Mrhid6Utils.DatabaseHelper = require("./lib/DB/db_helper_mysql");
 Mrhid6Utils.Cleanup = require("./lib/cleanup");
 Mrhid6Utils.Logger = require("./lib/logger");
 Mrhid6Utils.RedisHelper = require("./lib/redishelper");
-Mrhid6Utils.Metrics = require("./lib/metrics");
 Mrhid6Utils.Models = {
     Model: require("./lib/model").Model,
     Translation: require("./lib/model").Translation,
