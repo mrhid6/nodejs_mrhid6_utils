@@ -6,7 +6,6 @@
     "author": "Dominic <dominic.richardson1@hotmail.co.uk>",
     "license": "MIT",
     "dependencies": {
-        "axios": "^1.3.4",
         "bluebird": "^3.7.2",
         "express": "^4.18.1",
         "express-socket.io-session": "^1.3.5",
