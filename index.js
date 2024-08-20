@@ -4,10 +4,6 @@ module.exports.FileCache = require("./lib/filecache.js");
 module.exports.Cleanup = require("./lib/cleanup");
 module.exports.Logger = require("./lib/logger");
 
-module.exports.NetworkServer = require("./lib/networkserver");
-module.exports.NetworkClient = require("./lib/networkclient");
-module.exports.WSNetworkServer = require("./lib/WSNetworkServer");
-
 module.exports.Tools = require("./lib/tools");
 
 module.exports.DockerHelper = require("./lib/docker_helper");
